@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="icon.png" type="image/png">
+    <title>🥭</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .text-shadow-2 {
+            text-shadow: 1px 1px 2px black, -1px -1px white;
+        }
+    </style>
+</head>
+
+<body class="h-screen flex flex-col bg-yellow-400 || opacity-0 transition-opacity duration-1000" onload="document.body.style.opacity = 1">
+    <main class="grow flex flex-col gap-2 justify-center items-center font-mono">
+        <header class="flex items-center">
+            <h1 class="py-8 text-white text-7xl text-shadow-2">Hello :) 🥭</h1>
+        </header>
+        <menu class="flex flex-col gap-4 text-lg text-white font-medium align-middle">
+            <div class="group/m flex items-center">
+                <span class="mx-4 text-shadow-2 italic">Blog</span>
+                <div class="bg-[#f87d0e] rounded || absolute opacity-0 group-hover/m:opacity-100 transition-opacity duration-300">
+                    <div class="p-2 || transition-all duration-500 -mr-60 group-hover/m:mr-0 overflow-hidden">
+                        <span class="italic">🥚not yet :P</span>
+                    </div>
+                </div>
+            </div>
+            <div class="group/m flex items-center">
+                <span class="mx-4 text-shadow-2 italic">Firends</span>
+                <div class="bg-[#4dac0f] rounded || absolute opacity-0 group-hover/m:opacity-100 transition-opacity duration-300">
+                    <ul class="flex p-1 gap-2 || transition-all duration-500 -mr-60 group-hover/m:mr-0 overflow-hidden">
+                        <li class="py-1 px-2 rounded || transition-color duration-500 hover:bg-red-400">
+                            <a class="italic" href="https://misaka.im">🍌Mather</a>
+                        </li>
+                        <li class="py-1 px-2 rounded || transition-color duration-500 hover:bg-red-400">
+                            <a class="italic" href="https://crazypeak.im">☕Crazypeak</a>
+                        </li>
+                        <li class="py-1 px-2 rounded || transition-color duration-500 hover:bg-red-400">
+                            <a class="italic" href="https://silica.im">🥕Silica</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </menu>
+
+        <section class="basis-1/4"></section>
+
+    </main>
+    <footer class="max-h-min flex justify-center items-center">
+        <a class="text-white text-sm drop-shadow" href="http://www.beian.miit.gov.cn">粤ICP备19020442号</a>
+    </footer>
+</body>
+
+</html>
