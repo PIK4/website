@@ -14,12 +14,13 @@
     </style>
 </head>
 
-<body class="h-screen flex flex-col bg-yellow-400 || opacity-0 transition-opacity duration-1000" onload="document.body.style.opacity = 1">
+<body class="h-screen overflow-hidden flex flex-col bg-yellow-400 || opacity-0 transition-opacity duration-1000" onload="document.body.style.opacity = 1">
     <main class="grow flex flex-col gap-2 justify-center items-center font-mono">
         <header class="flex items-center">
             <h1 class="py-8 text-white text-7xl text-shadow-2">Hello :) 🥭</h1>
         </header>
         <menu class="flex flex-col gap-4 text-lg text-white font-medium align-middle">
+
             <div class="group/m flex items-center">
                 <span class="mx-4 text-shadow-2 italic">Blog</span>
                 <div class="bg-[#f87d0e] rounded || absolute opacity-0 group-hover/m:opacity-100 transition-opacity duration-300">
@@ -28,6 +29,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="group/m flex items-center">
                 <span class="mx-4 text-shadow-2 italic">Firends</span>
                 <div class="bg-[#4dac0f] rounded || absolute opacity-0 group-hover/m:opacity-100 transition-opacity duration-300">
@@ -44,13 +46,14 @@
                     </ul>
                 </div>
             </div>
+            
         </menu>
 
         <section class="basis-1/4"></section>
 
     </main>
-    <footer class="max-h-min flex justify-center items-center">
-        <a class="text-white text-sm drop-shadow" href="http://www.beian.miit.gov.cn">粤ICP备19020442号</a>
+    <footer class="flex flex-row justify-center">
+        <a class="my-2 text-white text-sm drop-shadow" href="http://www.beian.miit.gov.cn">粤ICP备19020442号</a>
     </footer>
 </body>
 
