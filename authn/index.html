@@ -31,6 +31,8 @@
     const displayResult = obj => {
         document.getElementById('result').innerHTML = `<pre>${JSON.stringify(obj, null, 4)}</pre>`
     }
+    
+    const buf2Str = buf => new Uint8Array(buf).reduce((s, b) => s + String.fromCharCode(b), '')
 
     const authCreate = async (user, challenge) => {
         const cred = await navigator.credentials.create({
@@ -54,10 +56,10 @@
             id: cred.id,
             type: cred.type,
             response: {
-                attestationObject: btoa(cred.response.attestationObject),
-                clientDataJSON: btoa(cred.response.clientDataJSON),
-                authenticatorData: btoa(cred.response.getAuthenticatorData()),
-                getPublicKey: btoa(cred.response.getPublicKey()),
+                attestationObject: buf2Str(cred.response.attestationObject),
+                clientDataJSON: buf2Str(cred.response.clientDataJSON),
+                authenticatorData: buf2Str(cred.response.getAuthenticatorData()),
+                getPublicKey: buf2Str(cred.response.getPublicKey()),
                 getPublicKeyAlgorithm: cred.response.getPublicKeyAlgorithm(),
                 getTransports: cred.response.getTransports()
             }
@@ -78,10 +80,10 @@
             id: cred.id,
             type: cred.type,
             response: {
-                authenticatorData: btoa(cred.response.authenticatorData),
-                clientDataJSON: btoa(cred.response.clientDataJSON),
-                signature: btoa(cred.response.signature),
-                userHandle: btoa(cred.response.userHandle)
+                authenticatorData: buf2Str(cred.response.authenticatorData),
+                clientDataJSON: buf2Str(cred.response.clientDataJSON),
+                signature: buf2Str(cred.response.signature),
+                userHandle: buf2Str(cred.response.userHandle)
             }
         })
     }
